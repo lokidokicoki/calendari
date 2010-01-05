@@ -1,3 +1,15 @@
 *.o
 ~*
 calendari
+test_ics_read
+test_ics_write
+.deps
+Makefile.in
+Makefile
+aclocal.m4
+autom4te.cache
+config.log
+config.status
+configure
+build-aux
+doxygen

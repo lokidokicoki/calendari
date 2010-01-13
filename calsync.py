@@ -196,7 +196,10 @@ def have_network():
   bus = dbus.SystemBus()
   network_manager = bus.get_object(
     'org.freedesktop.NetworkManager','/org/freedesktop/NetworkManager')
-  return network_manager.state() == NM_STATE_CONNECTED
+  try:
+    return network_manager.state() == NM_STATE_CONNECTED
+  except:
+    return True
 
 
 def read_config():

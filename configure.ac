@@ -1,5 +1,6 @@
 AC_INIT(calendari, 0.1)
 AC_CONFIG_AUX_DIR(build-aux)
+dnl if we want to worry about NEWS, README, INSTALL etc, then remove 'foreign'
 AM_INIT_AUTOMAKE(-Wall -Werror foreign silent-rules color-tests)
 
 PKG_CHECK_MODULES(ICAL, libical)

@@ -1,0 +1,23 @@
+Basic Setup
+===========
+
+- required packages:
+  > g++-4.4
+  > libical-dev
+  > libsqlite3-dev
+  > libgtk2.0-dev
+  > python-pyinotify (for calsync.py)
+- after the package is unzipped, run 'autoreconf -i' in the calendari directory.
+- configure; make; make install
+- create $HOME/.calsync/config file eg:
+    """
+    LOCAL:
+     Home = http://<user:passwd>@icalx.com/private/<user>/Home.ics
+     Work = http://<user:passwd>@icalx.com/public/<user>/Work.ics
+
+    REMOTE:
+     Other Home = http://<other_user:passwd>@icalx.com/private/<other_user>/Home.ics
+    """
+- run 'python calsync.py'; this will deamonise itself and refresh all calendars
+- run 'calendari --import=$HOME/.calsync/<name_of_calendar>.ics
+- run 'calendari' to view/edit your calendars

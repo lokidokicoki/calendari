@@ -18,6 +18,6 @@ Basic Setup
     REMOTE:
      Other Home = http://<other_user:passwd>@icalx.com/private/<other_user>/Home.ics
     """
-- run 'python calsync.py'; this will deamonise itself and refresh all calendars
+- run 'python calsync.py'; this will daemonise itself and refresh all calendars
 - run 'calendari --import=$HOME/.calsync/<name_of_calendar>.ics
 - run 'calendari' to view/edit your calendars
